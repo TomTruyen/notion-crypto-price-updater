@@ -33,3 +33,12 @@ Start editing crontab: `crontab -e`
 ```
 
 NOTE: `@reboot` is used to wait for the network connectivity to be active
+
+## Notion
+
+NOTE: when filling in the table, the following fields are REQUIRED:
+
+- Name (ticker of crypto)
+- Amount invested
+- Number of coins in wallet
+- Price/coin should be not empty (so either manually input a value like "0" OR EASIER just set a filter rule like `price/coin NOT EMPTY` this will automatically fill in 0 on new rows)

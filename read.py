@@ -85,6 +85,7 @@ class MyIntegration:
         """
         while True:
             try:
+                self.getNotionDatabaseEntities()
                 self.getCryptoPrices()
                 for _, data in self.my_variables_map["NOTION_ENTRIES"].items():
                     self.updateNotionDatabase(
@@ -98,5 +99,5 @@ class MyIntegration:
 
 
 if __name__ == "__main__":
-    # With 😴 sleeps to prevent rate limit from kicking in.
+    # With  sleeps to prevent rate limit from kicking in.
     MyIntegration().UpdateIndefinitely()
