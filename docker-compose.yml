@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: notion-crypto-price-updater
+    volumes:
+      - .:/app
+      - ./my_variables.yml:/app/my_variables.yml
+    command: python read.py
