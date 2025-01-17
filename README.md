@@ -8,31 +8,7 @@
 
 [Video Guide](https://www.youtube.com/watch?v=7Yc06t7oY7s)
 
-## Raspberry PI/cronjob setup
-
-With this method we don't have to run the code locally on the device. We can also run it on a server or a raspberry pi
-
-### Shell script
-
-```
-#!/bin/sh
-# notion_crpto_updater.sh
-
-cd /
-cd /home/pi/Desktop/NotionCryptoPriceUpdater
-python3 read.py
-cd /
-```
-
-### Cronjob
-
-Start editing crontab: `crontab -e`
-
-```
-@reboot sleep 30 &&  sh /home/pi/Desktop/NotionCryptoPriceUpdater/notion_crypto_updater.sh > /home/pi/Desktop/NotionCryptoPriceUpdater/script_logs/cronlog 2>&1
-```
-
-NOTE: `@reboot` is used to wait for the network connectivity to be active
+- Also copy `my_variables.example.yml` to `my_variables.yml`. Value for the token can be found under the integration on Notion
 
 ## Notion
 
